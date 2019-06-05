@@ -1,13 +1,9 @@
-import { IOrderDto } from './i-order-dto';
-import { ISampleDto } from './i-sample-dto';
+import { SampleDto } from './sample-dto';
 
-export class OrderDto implements IOrderDto {
+export class OrderDto {
 
-    private _code: string;    
-    public code() : string {
-        return this._code;
-    }
-        
+    public code : string;
+      
     public date: Date;
 
     public receptionDate: Date;
@@ -22,6 +18,6 @@ export class OrderDto implements IOrderDto {
     
     public description: string;
 
-    samples: ISampleDto[];
+    samples: SampleDto[];
 
 }

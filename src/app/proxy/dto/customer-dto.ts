@@ -1,16 +1,12 @@
-import { ICustomerDto } from './i-customer-dto';
-import { IOrderDto } from './i-order-dto';
+import { OrderDto } from './order-dto';
 
-export class CustomerDto implements ICustomerDto {
+export class CustomerDto {
 
-    private _code: string;    
-    public code() : string {
-        return this._code;
-    }    
-
+    public code : string;
+      
     public name: string;
     
     public comment: string;
 
-    public orders: IOrderDto[] = [];
+    public orders: OrderDto[] = [];
 }

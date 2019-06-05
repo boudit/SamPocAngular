@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule }    from '@angular/common/http';
 import { InMemoryDataService } from './service/in-memory-data.service';
-import { CustomerDto } from "./dto/CustomerDto";
+import { CustomerDto } from './dto/customer-dto';
+import { OrderDto } from './dto/order-dto';
+import { SampleDto } from './dto/sample-dto';
 
 @NgModule({
   declarations: [InMemoryDataService],
@@ -11,7 +13,10 @@ import { CustomerDto } from "./dto/CustomerDto";
     HttpClientModule
   ],
   exports: [
-    CustomerDto
+    CustomerDto,
+    OrderDto,
+    SampleDto
   ]
 })
+
 export class ProxyModule { }
