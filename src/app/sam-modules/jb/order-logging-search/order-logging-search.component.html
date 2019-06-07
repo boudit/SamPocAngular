@@ -1,0 +1,28 @@
+<form class="example-form" aria-orientation="horizontal">
+  <table>
+    <tr>
+      <td>
+        <mat-form-field>
+          <input type="search" placeholder="Recherche par attribut de Commande, d'Echantillon ou de Container"  matInput>
+        </mat-form-field>
+      </td>
+
+      <td>
+        <mat-form-field>
+          <input type="search" 
+                  name="customerSearch"
+                  placeholder="Recherche par Code, Nom ou Nom Interne de Client" 
+                  [(ngModel)]="customerCode"
+                  (keydown)="onCustomerKeyDown($event)"
+                  matInput>
+        </mat-form-field>
+      </td>
+
+      <td>
+        <mat-form-field>
+          <input type="search" placeholder="Recherche par Nom de Contact" matInput>
+        </mat-form-field>
+      </td>
+      </tr>
+  </table>
+</form>
