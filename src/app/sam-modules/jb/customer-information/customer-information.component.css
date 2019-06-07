@@ -1,0 +1,9 @@
+tr td:first-child{
+    width:1%;
+    white-space:nowrap;
+}
+
+div {
+    text-align: right;
+    padding-right: 4px; 
+}
