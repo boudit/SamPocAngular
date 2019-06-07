@@ -1,11 +1,13 @@
-<div style="display: table;">
-  <div style="display: table-row;">
-    <div style="display: table-cell;">
-        <iz-order-list [orders]="orders" (orderSelected)="onSelectedOrder($event)"></iz-order-list>
+<div style="display: flex;">
+  <div style="align-items: stretch; width: 20%; margin-right: 100px;">
+    <iz-order-list></iz-order-list>
+  </div>
+  <div style="align-items: stretch; width: 50%;">
+    <div style="display: flex; height: 80px;">
+      <mat-icon>add_circle</mat-icon>
+      <mat-icon>border_color</mat-icon>
     </div>
-    <div style="display: table-cell;">
-      <iz-order-header *ngIf="selectedOrder" [orderHeader]="selectedOrder.orderHeader"></iz-order-header>
-      <iz-order-lines *ngIf="selectedOrder" [orderLines]="selectedOrder.orderLines"></iz-order-lines>
-    </div>
+    <iz-order-header *ngIf="selectedOrder"></iz-order-header>
+    <iz-order-lines *ngIf="selectedOrder"></iz-order-lines>
   </div>
 </div>

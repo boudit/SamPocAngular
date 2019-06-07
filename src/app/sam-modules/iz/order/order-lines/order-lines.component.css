@@ -1,12 +1,3 @@
 .orderLines {
-    table-layout: fixed;
-}
-
-.orderLinesHeader{
-    display: table-row;
-    font-weight: bold;
-}
-
-.orderLineIndexHeader, .orderLineLabelHeader, .orderLineQuantityHeader {
-    width: 100px;
+    width: 400px;    
 }

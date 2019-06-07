@@ -3,8 +3,8 @@
   <mat-card-content>
     <mat-action-list>
       <button mat-list-item *ngFor="let order of orders" (click)="onSelectOrder(order)">
-        {{ order.orderHeader.orderCustomerName }} - {{ order.orderHeader.orderDate | date: 'dd/MM/yyyy' }}
-      </button>
+        {{ order.orderHeader.orderCustomerName }} - {{ order.orderHeader.orderDate | date: 'dd/MM/yyyy' }}                
+      </button>      
     </mat-action-list>
   </mat-card-content>
 </mat-card>

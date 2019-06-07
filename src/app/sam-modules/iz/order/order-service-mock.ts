@@ -16,10 +16,12 @@ export class OrderServiceMock {
             },
             orderLines: [
                 {
+                    lineNumber: 1,
                     label: "Chocolat",
                     quantity: 3
                 },
                 {
+                    lineNumber: 2,
                     label: "Jus d'orange",
                     quantity: 2
                 }
@@ -32,14 +34,17 @@ export class OrderServiceMock {
             },
             orderLines: [
                 {
+                    lineNumber: 1,
                     label: "Papier aluminium",
                     quantity: 1
                 },
                 {
+                    lineNumber: 2,
                     label: "Yaourts",
                     quantity: 23
                 },
                 {
+                    lineNumber: 3,
                     label: "Mouchoirs",
                     quantity: 10
                 }

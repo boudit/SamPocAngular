@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { OrderHeader } from 'src/app/sam-modules/iz/order/order-header';
+import { OrdersService } from '../orders/orders.service';
 
 @Component({
   selector: 'iz-order-header',
@@ -10,18 +11,14 @@ export class OrderHeaderComponent implements OnInit {
 
   private _orderHeader: OrderHeader;
 
-  @Input() 
-  set orderHeader(orderHeader: OrderHeader){
-    this._orderHeader = orderHeader;
-  }
-
   get orderHeader(): OrderHeader {
     return this._orderHeader;
   }
 
-  constructor() { }
+  constructor(private ordersService: OrdersService) { }
 
   ngOnInit() {
+    this.ordersService.getSelectedOrder().subscribe(order => this._orderHeader = order.orderHeader);
   }
 
 }

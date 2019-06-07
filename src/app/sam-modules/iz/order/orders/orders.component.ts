@@ -1,25 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { Order } from 'src/app/sam-modules/iz/order/order';
 import { OrderServiceMock } from 'src/app/sam-modules/iz/order/order-service-mock';
+import { OrdersService } from './orders.service'
 
 @Component({
   selector: 'iz-orders',
   templateUrl: './orders.component.html',
-  styleUrls: ['./orders.component.css']
+  styleUrls: ['./orders.component.css'],
+  providers: [OrdersService]
 })
 export class OrdersComponent implements OnInit {
 
-  selectedOrder: Order;
+  private _selectedOrder: Order;
 
-  orders: Order[];  
-
-  constructor(private orderServiceMock: OrderServiceMock) { }
-
-  ngOnInit() {
-    this.orderServiceMock.getOrders().subscribe(orders => this.orders = orders);
+  get selectedOrder(): Order{
+    return this._selectedOrder;
   }
 
-  onSelectedOrder(order: Order){
-    this.selectedOrder = order;
+  constructor(private ordersService: OrdersService) { }
+
+  ngOnInit() {    
+    this.ordersService.getSelectedOrder().subscribe(order => this._selectedOrder = order);
   }
 }

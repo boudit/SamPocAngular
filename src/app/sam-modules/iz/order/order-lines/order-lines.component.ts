@@ -9,7 +9,7 @@ import { OrderLine } from 'src/app/sam-modules/iz/order/order-line';
 export class OrderLinesComponent implements OnInit {
 
   private _orderLines: OrderLine[];  
-  columnsToDisplay = ['number', 'label', 'quantity'];
+  displayedColumns: string[] = ['lineNumber', 'label', 'quantity'];
   @Input() 
   set orderLines(orderLines: OrderLine[]){
     this._orderLines = orderLines;

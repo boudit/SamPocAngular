@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Order } from 'src/app/sam-modules/iz/order/order';
+import { OrdersService } from '../orders/orders.service';
 
 @Component({
   selector: 'iz-order-list',
@@ -8,15 +9,15 @@ import { Order } from 'src/app/sam-modules/iz/order/order';
 })
 export class OrderListComponent implements OnInit {  
 
-  @Input() orders: Order[];
-  @Output() orderSelected = new EventEmitter<Order>();
+  orders: Order[];
 
-  constructor() { }
+  constructor(private ordersService: OrdersService) { }
 
   ngOnInit() {
+    this.ordersService.loadOrders().subscribe(orders => this.orders = orders);
   }
 
   onSelectOrder(order: Order){
-    this.orderSelected.emit(order);
+    this.ordersService.selectOrder(order);   
   }
 }
