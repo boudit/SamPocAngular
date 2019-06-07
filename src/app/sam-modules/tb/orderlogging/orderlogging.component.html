@@ -1,11 +1,29 @@
 <mat-horizontal-stepper linear #stepper>
   <mat-step [stepControl]="searchFormGroup">
     <form [formGroup]="searchFormGroup">
-      <ng-template matStepLabel>Please search your customers</ng-template>      
-      <app-searchcustomers ></app-searchcustomers>
-      <!-- <mat-form-field>
-        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-      </mat-form-field> -->
+      <ng-template matStepLabel>Please search your customers</ng-template>  
+
+      <div class="container">
+
+  <mat-form-field>
+    <input type="search" placeholder="Recherche par attribut de Commande, d'Echantillon ou de Container"  matInput formControlName="firstCtrl">
+  </mat-form-field>
+
+  <mat-form-field>
+      <input type="search" 
+              name="customerSearch"
+              placeholder="Recherche par Code, Nom ou Nom Interne de Client" 
+              [(ngModel)]="customerCode"
+              (keydown)="onCustomerKeyDown($event)"
+              matInput
+              formControlName="firstCtrl"
+              >
+    </mat-form-field>
+
+    <mat-form-field>
+        <input type="search" placeholder="Recherche par Nom de Contact" matInput formControlName="firstCtrl" >
+      </mat-form-field>
+</div>
       <div>
         <button mat-button matStepperNext>Next</button>
       </div>

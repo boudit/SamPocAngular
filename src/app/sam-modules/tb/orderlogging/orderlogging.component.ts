@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { OrderLoggingService } from '../services/order-logging.service';
 
 @Component({
   selector: 'app-orderlogging',
@@ -15,7 +16,7 @@ export class OrderloggingComponent implements OnInit {
 
   isOptional = false;
 
-  constructor(private _formBuilder: FormBuilder) { }
+  constructor(private _formBuilder: FormBuilder, private orderLoggingCustomerService: OrderLoggingService) { }
 
   ngOnInit() {
     this.searchFormGroup = this._formBuilder.group({

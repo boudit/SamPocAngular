@@ -10,5 +10,5 @@ export class Customer {
 
     Comment: string;
 
-    orders: Order[];
+    Orders: Order[];
 }
