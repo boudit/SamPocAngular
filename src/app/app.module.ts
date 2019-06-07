@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import { ActivityModule } from './activity/activity.module';
 import { RoutingModule } from './routing/routing.module';
 
+import "jquery"; 
+import "signalr";
+
 @NgModule({
   declarations: [
     AppComponent
