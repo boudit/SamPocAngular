@@ -20,7 +20,7 @@ export class OrderLoggingService {
 
   constructor() { }
 
-  search(searchString: string) {
+  public search(searchString: string) {
     if (!searchString) {
       return;
     }
@@ -32,7 +32,7 @@ export class OrderLoggingService {
     }
   }
 
-  getCustomer(code: string) {
+  public getCustomer(code: string) {
     let customer = new Customer();
     customer.Code = DATA[0].code;
     customer.Name = DATA[0].name;
