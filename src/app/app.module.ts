@@ -4,6 +4,9 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ActivityModule } from './activity/activity.module';
 import { RoutingModule } from './routing/routing.module';
+import { IZModule } from './sam-modules/iz/iz.module';
+import { JBModule } from './sam-modules/jb/jb.module';
+import { TBModule } from './sam-modules/tb/tb.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +15,10 @@ import { RoutingModule } from './routing/routing.module';
   imports: [
     BrowserModule,
     ActivityModule,
-    RoutingModule
+    RoutingModule,
+    IZModule,
+    JBModule,
+    TBModule
   ],
   providers: [],
   bootstrap: [AppComponent]
