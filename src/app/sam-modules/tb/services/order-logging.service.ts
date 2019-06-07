@@ -1,7 +1,6 @@
 import { Injectable, Output, EventEmitter } from '@angular/core';
-import { TreeViewNode } from '../models/tree-view-node';
 import { Customer } from '../models/customer';
-import { DATA } from './data';
+import { CUSTOMERS } from './data';
 import { Sample } from '../models/sample';
 import { Order } from '../models/order';
 
@@ -10,7 +9,7 @@ import { Order } from '../models/order';
 })
 export class OrderLoggingService {
 
-  @Output() postCustomerSearchResult = new EventEmitter<TreeViewNode[]>();
+  @Output() postCustomerSearchResult = new EventEmitter<Customer[]>();
 
   @Output() postCustomer = new EventEmitter<Customer>();
 
@@ -20,23 +19,19 @@ export class OrderLoggingService {
 
   constructor() { }
 
-  public search(searchString: string) {
+  search(searchString: string) {
     if (!searchString) {
       return;
     }
 
-    if (searchString.toLowerCase().includes("bignon")) {
-      this.postCustomerSearchResult.emit(DATA);
-    } else {
-      this.postCustomerSearchResult.emit(null);
-    }
+    this.postCustomerSearchResult.emit(CUSTOMERS);
   }
 
-  public getCustomer(code: string) {
+  getCustomer(code: string) {
     let customer = new Customer();
-    customer.Code = DATA[0].code;
-    customer.Name = DATA[0].name;
-    customer.Description = DATA[0].description;
+    customer.Code = CUSTOMERS[0].Code;
+    customer.Name = CUSTOMERS[0].Name;
+    customer.Description = CUSTOMERS[0].Description;
     customer.Comment = "A simple description";
 
     this.postCustomer.emit(customer);

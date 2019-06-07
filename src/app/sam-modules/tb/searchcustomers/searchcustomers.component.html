@@ -1,0 +1,21 @@
+<div class="container">
+
+  <mat-form-field>
+    <input type="search" placeholder="Recherche par attribut de Commande, d'Echantillon ou de Container"  matInput formControlName="firstCtrl">
+  </mat-form-field>
+
+  <mat-form-field>
+      <input type="search" 
+              name="customerSearch"
+              placeholder="Recherche par Code, Nom ou Nom Interne de Client" 
+              [(ngModel)]="customerCode"
+              (keydown)="onCustomerKeyDown($event)"
+              matInput
+              formControlName="firstCtrl"
+              >
+    </mat-form-field>
+
+    <mat-form-field>
+        <input type="search" placeholder="Recherche par Nom de Contact" matInput formControlName="firstCtrl" >
+      </mat-form-field>
+</div>

@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SampleInformationComponent } from './sample-information.component';
+import { FormsModule } from '@angular/forms';
+import { MaterialModule } from '../../material-module';
 
 describe('SampleInformationComponent', () => {
   let component: SampleInformationComponent;
@@ -8,7 +10,11 @@ describe('SampleInformationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SampleInformationComponent ]
+      declarations: [ SampleInformationComponent ],
+      imports: [
+        FormsModule,
+        MaterialModule
+      ]
     })
     .compileComponents();
   }));
