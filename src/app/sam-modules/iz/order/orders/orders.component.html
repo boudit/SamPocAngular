@@ -1,0 +1,11 @@
+<div style="display: table;">
+  <div style="display: table-row;">
+    <div style="display: table-cell;">
+        <iz-order-list [orders]="orders" (orderSelected)="onSelectedOrder($event)"></iz-order-list>
+    </div>
+    <div style="display: table-cell;">
+      <iz-order-header *ngIf="selectedOrder" [orderHeader]="selectedOrder.orderHeader"></iz-order-header>
+      <iz-order-lines *ngIf="selectedOrder" [orderLines]="selectedOrder.orderLines"></iz-order-lines>
+    </div>
+  </div>
+</div>
