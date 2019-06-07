@@ -4,7 +4,7 @@ body {
     font-family: Roboto,"Helvetica Neue",sans-serif;
     font-size: 14px;
   }
-  
+/*   
   mat-form-field.mat-form-field {
     margin: 2px;
     width: 100%;
@@ -23,7 +23,7 @@ body {
   .mat-form-field-underline {
     bottom: 0 !important;
   }
-  
+   */
   form {
     width: 99%;
     padding-left: 4px;
