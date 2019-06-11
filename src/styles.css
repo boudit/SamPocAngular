@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+    font-size: 14px;
+  }
+
+  form {
+    width: 99%;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  
+  table {
+    width: 100%
+  }
+  
+  mat-form-field.sam-thin-mat.mat-form-field {
+    appearance: "fill";
+    margin: 2px;
+    width: 100%;
+}
+  
+mat-form-field.sam-thin-mat > 
+div.mat-form-field-wrapper {
+    padding-bottom: 0;
+}
+  
+mat-form-field.sam-thin-mat > 
+div.mat-form-field-wrapper > 
+div.mat-form-field-flex >
+div.mat-form-field-infix {
+    border-top-width: 0;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+  
+mat-form-field.sam-thin-mat > 
+div.mat-form-field-wrapper >
+div.mat-form-field-underline {
+    bottom: 0;
+}

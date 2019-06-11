@@ -1,0 +1,34 @@
+.example-tree ul,
+.example-tree li {
+    cursor: pointer;
+    list-style-type: none;
+    background-color: #EEE;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+.example-tree li:hover {
+    color: #607D8B;
+    background-color: #DDD;
+}
+
+.selected {
+    background-color: #CFD8DC !important;
+    color: white;
+  }
+
+.example-tree ul {
+    padding-left: 20px;
+}
+
+.mat-icon-button {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.mat-tree-node {
+    min-height: 20px;
+}

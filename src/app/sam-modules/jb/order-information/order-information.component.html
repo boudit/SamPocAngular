@@ -1,0 +1,67 @@
+<form class="example-form" *ngIf="order">
+
+  <h3>Commande: {{order.Code}}</h3>
+
+  <table>
+    <tr>
+      <td><div>Date de la Commande</div></td>
+      <td>
+        <mat-form-field class="sam-thin-mat">
+          <input [matDatepicker]="orderDatePicker" matInput>
+          <mat-datepicker-toggle matSuffix [for]="orderDatePicker"></mat-datepicker-toggle>
+          <mat-datepicker #orderDatePicker></mat-datepicker>
+        </mat-form-field>
+      </td>
+      <td><div>Réception prévue le</div></td>
+      <td>
+        <mat-form-field class="sam-thin-mat">
+          <input [matDatepicker]="orderReceptionDatePicker" matInput>
+          <mat-datepicker-toggle matSuffix [for]="orderReceptionDatePicker"></mat-datepicker-toggle>
+          <mat-datepicker #orderReceptionDatePicker></mat-datepicker>
+        </mat-form-field>
+      </td>
+    </tr>
+  
+    <tr>
+      <td><div>Référence de la Commande</div></td>
+      <td>
+        <mat-form-field class="sam-thin-mat">
+          <input matInput>
+        </mat-form-field>
+      </td>
+      <td><div>Référence Logistique</div></td>
+      <td>
+        <mat-form-field class="sam-thin-mat">
+          <input matInput>
+        </mat-form-field>
+      </td>
+    </tr>
+
+    <tr>
+      <td><div>Référence interne</div></td>
+      <td>
+        <mat-form-field class="sam-thin-mat">
+          <input matInput>
+        </mat-form-field>
+      </td>
+    </tr>
+    <tr>
+      <td><div>Référence de facturation</div></td>
+      <td>
+        <mat-form-field class="sam-thin-mat">
+          <input matInput>
+        </mat-form-field>
+      </td>
+    </tr>
+    
+    <tr>
+      <td><div>Description de la commande</div></td>
+      <td colspan="3">
+        <mat-form-field class="sam-thin-mat">
+          <input name="description" [(ngModel)]="order.Description" matInput>
+        </mat-form-field>
+      </td>
+    </tr>
+
+  </table>
+</form>

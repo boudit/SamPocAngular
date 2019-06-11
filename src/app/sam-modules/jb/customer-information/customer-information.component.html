@@ -1,0 +1,27 @@
+<form class="example-form" *ngIf="customer">
+  <h3>Client: {{customer.Code}}</h3>
+  <table>
+ 
+    <tr>
+      <td>       
+          <div><label>Nom interne du client</label></div>
+      </td>
+      <td>
+        <mat-form-field class="sam-thin-mat">
+          <input name="name" [(ngModel)]="customer.Name" matInput>
+        </mat-form-field>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+          <div><label>Commentaire client</label></div>
+      </td>
+      <td>
+        <mat-form-field class="sam-thin-mat">
+          <textarea  name="comment" [(ngModel)]="customer.Comment" matInput></textarea>
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+</form>

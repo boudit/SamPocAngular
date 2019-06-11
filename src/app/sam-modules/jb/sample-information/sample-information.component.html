@@ -1,0 +1,26 @@
+<form class="example-form" *ngIf="sample">
+  
+  <h3>Echantillon: {{sample.Code}}</h3>
+
+  <table>
+ 
+    <tr>
+      <td><div>Description</div></td>
+      <td>
+        <mat-form-field class="sam-thin-mat">
+          <input name="description" [(ngModel)]="sample.Description" matInput>
+        </mat-form-field>
+      </td>
+    </tr>
+
+    <tr>
+      <td><div>Commentaire</div></td>
+      <td>
+        <mat-form-field class="sam-thin-mat">
+          <input name="comment" [(ngModel)]="sample.Comment" matInput>
+        </mat-form-field>
+      </td>
+    </tr>
+
+  </table>
+</form>

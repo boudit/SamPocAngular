@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-title>Order header</mat-card-title>
+  <mat-card-content>    
+    <p>
+      <span>Customer Name : </span>
+      <span>{{ orderHeader.orderCustomerName }}</span>
+    </p>
+
+    <p>
+      <span>Order Date : </span>
+      <span>{{ orderHeader.orderDate | date: 'dd/MM/yyyy' }}</span>
+    </p>
+  </mat-card-content>
+</mat-card>
