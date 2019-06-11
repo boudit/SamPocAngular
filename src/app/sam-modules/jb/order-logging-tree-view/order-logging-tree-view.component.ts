@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TreeViewNode, TreeViewNodeType } from '../models/tree-view-node';
 import { FlatTreeControl } from '@angular/cdk/tree';
 import { MatTreeFlattener, MatTreeFlatDataSource } from '@angular/material';
-import { OrderLoggingService } from '../services/order-logging.service';
+import { OrderLoggingScreenService } from '../services/order-logging-screen.service';
 
 interface FlatNode {
   expandable: boolean,
@@ -40,7 +40,9 @@ export class OrderLoggingTreeViewComponent implements OnInit {
 
   hasChild = (_: number, node: FlatNode) => node.expandable;
  
-  constructor(private orderLoggingService: OrderLoggingService) { 
+  activeNode: TreeViewNode;
+
+  constructor(private orderLoggingService: OrderLoggingScreenService) { 
   }
 
   ngOnInit(): void {
@@ -57,6 +59,8 @@ export class OrderLoggingTreeViewComponent implements OnInit {
   }
 
   onClick(node: TreeViewNode) {
+    this.activeNode = node;
+    
     switch (node.type) {
       case TreeViewNodeType.Customer: {
         this.loadCustomer(node.code);
@@ -74,6 +78,8 @@ export class OrderLoggingTreeViewComponent implements OnInit {
   }
 
   private loadCustomer(customerCode: string) {
+    this.orderLoggingService.clearOrder();
+    this.orderLoggingService.clearSample();
     this.orderLoggingService.getCustomer(customerCode);
   }
 

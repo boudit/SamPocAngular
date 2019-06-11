@@ -3,7 +3,7 @@
   <!-- This is the tree node template for leaf nodes -->
   <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding matTreeNodePaddingIndent="20">
     <button mat-icon-button disabled></button>   
-    <li (click)="onClick(node)">
+    <li (click)="onClick(node)" [class.selected]="node === activeNode">
       {{node.code}}
       {{node.name}}
       {{node.description}}
@@ -18,7 +18,7 @@
         {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
       </mat-icon>
     </button>
-    <li (click)="onClick(node)">
+    <li (click)="onClick(node)" [class.selected]="node === activeNode">
       {{node.code}}
       {{node.name}}
       {{node.description}}

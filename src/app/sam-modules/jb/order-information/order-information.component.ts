@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { OrderLoggingService } from '../services/order-logging.service';
+import { OrderLoggingScreenService } from '../services/order-logging-screen.service';
 import { Order } from '../models/order';
 
 @Component({
@@ -11,7 +11,7 @@ export class OrderInformationComponent implements OnInit {
 
   public order: Order;
 
-  constructor(private orderLoggingService: OrderLoggingService) {
+  constructor(private orderLoggingService: OrderLoggingScreenService) {
   }
 
   ngOnInit() {

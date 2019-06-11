@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Customer } from '../models/customer';
-import { OrderLoggingService } from '../services/order-logging.service';
+import { OrderLoggingScreenService } from '../services/order-logging-screen.service';
 
 @Component({
   selector: 'jb-customer-information',
@@ -11,7 +11,7 @@ export class CustomerInformationComponent implements OnInit {
 
   public customer: Customer;
 
-  constructor(private customerService: OrderLoggingService) {
+  constructor(private customerService: OrderLoggingScreenService) {
   }
   
   ngOnInit() {

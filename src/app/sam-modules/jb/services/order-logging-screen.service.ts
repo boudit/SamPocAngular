@@ -8,7 +8,7 @@ import { Order } from '../models/order';
 @Injectable({
   providedIn: 'root'
 })
-export class OrderLoggingService {
+export class OrderLoggingScreenService {
 
   @Output() postCustomerSearchResult = new EventEmitter<TreeViewNode[]>();
 

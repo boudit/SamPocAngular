@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { OrderLoggingService } from '../services/order-logging.service';
+import { OrderLoggingScreenService } from '../services/order-logging-screen.service';
 
 @Component({
   selector: 'jb-order-logging-search',
@@ -10,7 +10,7 @@ export class OrderLoggingSearchComponent implements OnInit {
 
   customerCode: string;
 
-  constructor(private orderLoggingCustomerService: OrderLoggingService) {    
+  constructor(private orderLoggingCustomerService: OrderLoggingScreenService) {    
   }
 
   ngOnInit() {
